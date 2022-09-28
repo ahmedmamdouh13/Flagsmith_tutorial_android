@@ -12,6 +12,7 @@ import com.flag.android.adapter.FlagAdapter
 import com.flag.android.adapter.FlagPickerSelect
 import com.flag.android.flagsmith.FlagConstants
 import com.flag.android.flagsmith.builder.FlagsmithBuilder
+import com.flag.android.flagsmith.interfaces.IFeatureFoundChecker
 import com.flag.android.flagsmith.interfaces.IFlagSingle
 import com.flag.android.flagsmith.response.ResponseFlagElement
 import com.flag.android.helper.Helper
@@ -130,5 +131,19 @@ class FeatureSearchActivity : AppCompatActivity() {
         super.onResume()
         //keybaord
         Helper.keyboardHidden( activity )
+    }
+
+    ///--------------------------------------------- get the flag single data
+
+    fun getFlagByKeyId( keyFlag : String ) {
+        flagBuilder.hasFeatureFlag( keyFlag, object  : IFeatureFoundChecker {
+            override fun found() {
+
+            }
+
+            override fun notFound() {
+
+            }
+        })
     }
 }
