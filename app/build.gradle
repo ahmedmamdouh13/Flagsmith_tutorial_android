@@ -43,33 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 
-    //--------------------------- abdallah helper
-
-    implementation("com.squareup.okhttp3:okhttp:4.2.0")
-    implementation 'com.google.code.gson:gson:2.8.2'
-
-    //flagsmith
-  //  implementation 'com.github.AbdallahAndroid:com.flagsmith.android:0.4.0'
+    implementation project(':flagsmith_client')
+//    implementation project(':android')
 }
-
-//---------------------------------------------------- publish gradle
-//
-//afterEvaluate {
-//
-//    publishing {
-//
-//        if (!plugins.hasPlugin("com.android.application")) {
-//            publications {
-//                release(MavenPublication) {
-//                    from components.release
-//                    //  from components.java
-//
-//                    groupId = 'com.flagsmith'
-//                    artifactId = 'android'
-//                    version = '0.7.0'
-//                }
-//            }
-//        }
-//
-//    }
-//}
