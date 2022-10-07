@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -49,4 +50,23 @@ dependencies {
 
     //flagsmith
   //  implementation 'com.github.AbdallahAndroid:com.flagsmith.android:0.4.0'
+}
+
+//---------------------------------------------------- publish gradle
+
+publishing {
+
+    if (!plugins.hasPlugin("android")) {
+        publications {
+            release(MavenPublication) {
+                  from components.release
+                //  from components.java
+
+                groupId = 'com.flagsmith'
+                artifactId = 'android'
+                version = '0.6.0'
+            }
+        }
+    }
+
 }
