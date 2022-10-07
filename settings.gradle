@@ -16,4 +16,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Flagsmith"
+//rootProject.name = "Flag"
 include ':app'
+include ':flagsmith_client'

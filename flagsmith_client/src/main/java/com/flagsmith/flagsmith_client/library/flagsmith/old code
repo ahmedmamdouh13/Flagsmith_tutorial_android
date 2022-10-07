@@ -1,0 +1,36 @@
+//package com.flag.android.flagsmith;
+//
+//import android.util.Log;
+//
+//import com.flagsmith.FlagsmithClient;
+//
+//public class FlagsmithUtils {
+//
+//    public static  void getFeature(String featureId, IFlagListener flagListener ) {
+//
+////        FlagsmithTestHelper.
+//
+//        new Thread(new Runnable() {
+//            public void run() {
+//
+////                Log.i( "abdo","FlagsmithUtils - getFeature() - featureId: " + featureId);
+////                FlagsmithClient flagsmithClient = FlagsmithClient.newBuilder()
+////                        .setApiKey( FlagsConstant.environmentDevelopmentKey)
+////                        .build();
+////
+////                MFeature mFeature = new MFeature();
+////                mFeature.enabled = flagsmithClient.hasFeatureFlag(featureId);
+////                mFeature.value  = flagsmithClient.getFeatureFlagValue( featureId);
+////
+////                Log.i( "abdo","FlagsmithUtils - getFeature() - mFeature: " + mFeature);
+////
+////                try { Thread.sleep(100); } catch (InterruptedException e) { }
+////
+////                flagListener.success( mFeature );
+//
+//            } }).start();  //end thread
+//
+//
+//    }
+//
+//}
