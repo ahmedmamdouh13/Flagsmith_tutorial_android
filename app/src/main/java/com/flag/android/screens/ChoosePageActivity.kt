@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import com.flag.android.R
+import com.flag.android.helper.Helper
+import com.flag.android.library.FlagsmithSDK
 import com.flag.android.screens.flag.FeatureSearchActivity
 import com.flag.android.screens.flag.FlagListActivity
 import com.flag.android.screens.trait.TraitsActivity
@@ -23,6 +25,12 @@ class ChoosePageActivity : AppCompatActivity() {
         setup_bt_flags();
         setup_bt_feature()
         setup_bt_trait()
+
+        //test
+//        var sdk = FlagsmithSDK()
+
+//        var builderSDK : FlagsmithSDK.Builder = FlagsmithSDK.Builder()
+//        builderSDK.setAPIKey( Helper.tokenApiKey)
     }
 
     private fun setup_bt_flags() {

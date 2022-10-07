@@ -113,7 +113,7 @@ class TraitsActivity : AppCompatActivity() {
                 }
 
             }
-        });
+        })
     }
 
 
