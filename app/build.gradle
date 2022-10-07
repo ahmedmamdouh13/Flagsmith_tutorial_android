@@ -54,19 +54,22 @@ dependencies {
 
 //---------------------------------------------------- publish gradle
 
-publishing {
+afterEvaluate {
 
-    if (!plugins.hasPlugin("android")) {
-        publications {
-            release(MavenPublication) {
-                  from components.release
-                //  from components.java
+    publishing {
 
-                groupId = 'com.flagsmith'
-                artifactId = 'android'
-                version = '0.6.0'
+        if (!plugins.hasPlugin("com.android.application")) {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                    //  from components.java
+
+                    groupId = 'com.flagsmith'
+                    artifactId = 'android'
+                    version = '0.7.0'
+                }
             }
         }
-    }
 
+    }
 }
